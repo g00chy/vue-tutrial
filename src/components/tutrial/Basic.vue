@@ -1,21 +1,19 @@
 <template>
-    <div>
-        
-    </div>
+  <div></div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue";
 
-export interface Data {
-    hoge: string
+interface Data {
+  hoge: string;
 }
 
-Data data = ({
-    hoge: 'min'
-})
+const data: Data = {
+  hoge: "min",
+};
 
 export default Vue.extend({
-    data
+  data,
 })
 </script>
