@@ -3,6 +3,13 @@
     <span v-if="seen">seen</span>
     <div v-text="val">meta</div>
     <div v-text="worstProgrammingLanguages"></div>
+
+    <div class="row">
+      <div class="col-12">
+        <p>{{ beforeReverseMessage }}</p>
+        <button v-on:click="reverseMesssage">Reverse!</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -10,7 +17,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  props :{
+  props: {
     val: {
       type: String,
       default: "hoge",
@@ -21,11 +28,27 @@ export default Vue.extend({
     },
   },
   data() {
-    return {seen: true};
+    return {
+      seen: true,
+      beforeReverseMessage: "hello",
+      groceryList: [
+        { id: 0, text: "Vegetables" },
+        { id: 1, text: "Cheese" },
+        { id: 2, text: "Whatever else humans are supposed to eat" },
+      ],
+    };
   },
   computed: {
     worstProgrammingLanguages(): string {
       return this.programmingLangauges.split(", ").reverse().join(", ");
+    },
+  },
+  methods: {
+    reverseMesssage() {
+      this.beforeReverseMessage = this.beforeReverseMessage
+        .split("")
+        .reverse()
+        .join("");
     },
   },
 });
