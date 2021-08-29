@@ -5,7 +5,7 @@
       <input v-model="firstName" /><br />
       <input v-model="lastName" />
     </div>
-    <span>Fullname</span><span v-text="fullname" />
+    <span>Fullname:</span><span v-text="fullname" />
   </div>
 </template>
 
