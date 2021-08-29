@@ -9,14 +9,25 @@
         <p>{{ beforeReverseMessage }}</p>
         <button v-on:click="reverseMesssage">Reverse!</button>
       </div>
+      <div class="col-12">
+        <TodoList
+          v-for="item in groceryList"
+          v-bind:todo="item"
+          v-bind:key="item.id"
+        ></TodoList>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import TodoList from "./child/TodoList.vue";
 
 export default Vue.extend({
+  components: {
+    TodoList,
+  },
   props: {
     val: {
       type: String,
