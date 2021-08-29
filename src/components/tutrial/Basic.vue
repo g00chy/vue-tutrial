@@ -16,6 +16,12 @@
           v-bind:key="item.id"
         ></TodoList>
       </div>
+      <div class="col-12">
+        <FullName></FullName>
+      </div>
+      <div class="col-12">
+        <FullName2></FullName2>
+      </div>
     </div>
   </div>
 </template>
@@ -23,10 +29,14 @@
 <script lang="ts">
 import Vue from "vue";
 import TodoList from "./child/TodoList.vue";
+import FullName from "./child/fullname.vue";
+import FullName2 from "./child/fullname2.vue";
 
 export default Vue.extend({
   components: {
     TodoList,
+    FullName,
+    FullName2,
   },
   props: {
     val: {
