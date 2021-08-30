@@ -11,6 +11,18 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { ThisTypedComponentOptionsWithRecordProps } from "vue/types/options";
+
+interface DataType {
+  firstName: string,
+  lastName: string,
+}
+
+interface MethodType {}
+interface ComputedType {
+  fullName(): void
+}
+interface PropType {}
 
 export default Vue.extend({
   data() {
@@ -25,5 +37,5 @@ export default Vue.extend({
       return this.firstName + " " + this.lastName;
     },
   },
-});
+} as ThisTypedComponentOptionsWithRecordProps<Vue, DataType, MethodType, ComputedType, PropType>);
 </script>
