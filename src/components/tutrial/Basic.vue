@@ -22,6 +22,9 @@
       <div class="col-12">
         <FullName2></FullName2>
       </div>
+      <div class="col-12">
+        <question></question>
+      </div>
     </div>
   </div>
 </template>
@@ -31,12 +34,14 @@ import Vue from "vue";
 import TodoList from "./child/TodoList.vue";
 import FullName from "./child/fullname.vue";
 import FullName2 from "./child/fullname2.vue";
+import Question from "./child/question.vue";
 
 export default Vue.extend({
   components: {
     TodoList,
     FullName,
     FullName2,
+    Question,
   },
   props: {
     val: {
