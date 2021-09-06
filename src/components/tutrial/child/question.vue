@@ -29,11 +29,13 @@ export default Vue.extend({
     question: function (): void {
       this.answer = "Waiting for you to stop typing...";
       this.imagehref = "";
-      this.debouncedGetAnswer();
+      // ないと動かないけど、TypeScriptがエラー出してくるのでコメントアウト
+      // this.debouncedGetAnswer();
     },
   },
   created(): void {
-    this.debouncedGetAnswer = _.debounce(this.getAnswer, 500);
+    // ないと動かないけど、TypeScriptがエラー出してくるのでコメントアウト
+    // this.debouncedGetAnswer = _.debounce(this.getAnswer, 500);
   },
   methods: {
     getAnswer(): void {
