@@ -6,11 +6,12 @@ Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
-    path: "/",
-    name: "Tutrial",
-
-    component: () => 
-      import( "../views/Tutrial.vue"),
+    path: "/compute_watcher",
+    name: "Compuute Watcher",
+    component: () =>
+      import(
+        /* webpackChunkName: "compute watcher" */ "../views/ComputeWatcher.vue"
+      ),
   },
   {
     path: "/home",
@@ -25,7 +26,7 @@ const routes: Array<RouteConfig> = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
-  }
+  },
 ];
 
 const router = new VueRouter({
