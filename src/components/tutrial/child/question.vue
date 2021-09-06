@@ -3,6 +3,7 @@
     <p>as yes/no question:</p>
     <input v-model="question" />
     <p v-text="answer" />
+    <img v-bind:src="imagehref" />
   </div>
 </template>
 
@@ -10,17 +11,24 @@
 import Vue from "vue";
 import _ from "lodash";
 import axios from "axios";
+export type DataType = {
+  question: string;
+  answer: string;
+  imagehref: string;
+};
 
 export default Vue.extend({
-  data() {
+  data(): DataType {
     return {
       question: "",
       answer: "I cannot give you an answer util you ask a question",
+      imagehref: "",
     };
   },
   watch: {
-    question: function(): void {
+    question: function (): void {
       this.answer = "Waiting for you to stop typing...";
+      this.imagehref = "";
       this.debouncedGetAnswer();
     },
   },
@@ -38,8 +46,9 @@ export default Vue.extend({
         .get("https://yesno.wtf/api")
         .then((response) => {
           this.answer = _.capitalize(response.data.answer);
+          this.imagehref = _.capitalize(response.data.image);
         })
-        .catch((error) => {
+        .catch(() => {
           this.answer = "error! could not reach the API.";
         });
     },
