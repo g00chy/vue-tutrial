@@ -1,15 +1,15 @@
 <template>
-  <basic />
+  <Index />
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import Basic from "../components/tutrial/Basic.vue";
+import Index from "../components/computewatcher/Index.vue";
 
 export default Vue.extend({
   name: "Tutrial",
   components: {
-    Basic,
+    Index,
   },
 });
 </script>

@@ -6,6 +6,12 @@ Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
+    path: "/binding",
+    name: "Binding",
+    component: () =>
+      import(/* webpackChunkName: "binding" */ "../views/Binding.vue"),
+  },
+  {
     path: "/compute_watcher",
     name: "Compuute Watcher",
     component: () =>
