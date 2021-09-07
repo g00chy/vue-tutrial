@@ -12,9 +12,14 @@
 
 <script lang="ts">
 import Vue from "vue";
+
 export type DataType = {
   isActive: boolean;
   hasError: boolean;
+};
+export type classObject = {
+  active: boolean;
+  "text-danger": boolean;
 };
 
 export default Vue.extend({
@@ -26,7 +31,7 @@ export default Vue.extend({
     };
   },
   computed: {
-    classObject(): DataType {
+    classObject(): classObject {
       return {
         active: this.isActive,
         "text-danger": this.hasError,
