@@ -1,5 +1,7 @@
 # vue-tutrial
 
+[vue v2 tutrial](https://jp.vuejs.org/v2/guide/index.html)
+
 ## Project setup
 ```
 yarn install
