@@ -7,7 +7,9 @@
     </div>
     <div v-else>test</div>
     <div v-show="ok">v-show</div>
-    <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">ほげぇ</div>
+    <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">
+      ほげぇ
+    </div>
   </div>
 </template>
 
