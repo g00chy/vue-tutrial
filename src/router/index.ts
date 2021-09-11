@@ -9,14 +9,14 @@ const routes: Array<RouteConfig> = [
     path: "/binding",
     name: "Binding",
     component: () =>
-      import(/* webpackChunkName: "binding" */ "../views/Binding.vue"),
+      import(/* webpackChunkName: "binding" */ "../views/2Binding.vue"),
   },
   {
     path: "/compute_watcher",
     name: "Compuute Watcher",
     component: () =>
       import(
-        /* webpackChunkName: "compute watcher" */ "../views/ComputeWatcher.vue"
+        /* webpackChunkName: "compute watcher" */ "../views/1ComputeWatcher.vue"
       ),
   },
   {
