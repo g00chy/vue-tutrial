@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <a href="https://jp.vuejs.org/v2">このページ</a>でやっていることを練習。
   </div>
 </template>
