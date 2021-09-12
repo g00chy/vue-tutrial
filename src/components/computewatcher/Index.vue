@@ -4,7 +4,7 @@
     <div v-text="val">meta</div>
     <div v-text="worstProgrammingLanguages"></div>
 
-    <div class="row">
+    <div>
       <div class="col-12">
         <p>{{ beforeReverseMessage }}</p>
         <button v-on:click="reverseMesssage">Reverse!</button>
@@ -58,9 +58,18 @@ export default Vue.extend({
       seen: true,
       beforeReverseMessage: "hello",
       groceryList: [
-        { id: 0, text: "Vegetables" },
-        { id: 1, text: "Cheese" },
-        { id: 2, text: "Whatever else humans are supposed to eat" },
+        {
+          id: 0,
+          text: "Vegetables",
+        },
+        {
+          id: 1,
+          text: "Cheese",
+        },
+        {
+          id: 2,
+          text: "Whatever else humans are supposed to eat",
+        },
       ],
     };
   },
