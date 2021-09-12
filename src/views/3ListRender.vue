@@ -13,7 +13,8 @@
       <h3>v-for-3</h3>
       <v-for-3 class="child"></v-for-3>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-12">
+      <h2>component</h2>
       <h3>v-for-4</h3>
       <v-for-4 class="child"></v-for-4>
     </div>

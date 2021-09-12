@@ -1,16 +1,22 @@
 <template>
-  <div>
-    <ul v-for="(n, key) in arrayNum" :key="key">
-      test
-      <li v-for="(data, key) in getHalf(n)" :key="`first-${key}`">
-        {{ data }}
-      </li>
-    </ul>
-    <ul v-for="(n, key) in arrayNum2" :key="`sec-parrent-${key}`">
-      <li>{{ n.message }}</li>
-      <li v-for="(num, key2) in getHalf(n.num)" :key="`sec-${key2}`">
-        {{ num }}
-      </li>
+  <div id="todo-list-example">
+    <form v-on:submit.prevent="addNewTodo">
+      <label for="new-todo">Add a todo</label>
+      <input
+        v-model="newTodoText"
+        id="new-todo"
+        placeholder="E.g. Feed the cat"
+      />
+      <button v-on:click="newAddTodo">Add</button>
+    </form>
+    <ul>
+      <li
+        is="todo-item"
+        v-for="(todo, index) in todos"
+        v-bind:key="todo.id"
+        v-bind:title="todo.title"
+        v-on:remove="todos.splice(index, 1)"
+      ></li>
     </ul>
   </div>
 </template>
@@ -19,29 +25,49 @@
 import Vue from "vue";
 
 export type DataType = {
-  arrayNum: Array<Array<number>>;
-  arrayNum2: Array<{ message: string; num: Array<number> }>;
+  todos: Array<{ id: number; title: string }>;
+  newTodoText: string;
+  nextTodoId: number;
 };
 
+let TodoItem = Vue.component("todo-item", {
+  template:
+    "<li> {{ title }} <button v-on:click=\"$emit('remove')\">Remove</button> </li>",
+  props: ["title"],
+});
+
 export default Vue.extend({
-  name: "v-for3",
+  name: "v-for4",
+  components: {
+    TodoItem,
+  },
   data: (): DataType => {
     return {
-      arrayNum: [
-        [1, 2, 3, 4, 5],
-        [6, 7, 8, 9, 10],
+      todos: [
+        {
+          id: 1,
+          title: "hogehoge",
+        },
+        {
+          id: 2,
+          title: "hogehoge",
+        },
+        {
+          id: 3,
+          title: "hogehoge",
+        },
       ],
-      arrayNum2: [
-        { message: "v1", num: [1, 2, 3, 4, 5] },
-        { message: "v2", num: [6, 7, 8, 9, 10] },
-      ],
+      newTodoText: "",
+      nextTodoId: 4,
     };
   },
   methods: {
-    getHalf(records: Array<number>): number[] {
-      return records.filter((item: number): boolean => {
-        return item % 2 == 0;
+    newAddTodo: function (): void {
+      this.todos.push({
+        id: this.nextTodoId++,
+        title: this.newTodoText,
       });
+      this.newTodoText = "";
     },
   },
 });
