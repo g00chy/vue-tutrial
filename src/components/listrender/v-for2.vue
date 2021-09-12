@@ -12,7 +12,7 @@ export type DataType = {
 };
 
 export default Vue.extend({
-  name: "v-for2",
+  name: "v-for-2",
   data: (): DataType => {
     return {
       arrayNum: [1, 2, 3, 4, 5],

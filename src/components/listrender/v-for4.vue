@@ -39,7 +39,6 @@ export default Vue.extend({
   },
   methods: {
     getHalf(records: Array<number>): number[] {
-      console.log(records);
       return records.filter((item: number): boolean => {
         return item % 2 == 0;
       });

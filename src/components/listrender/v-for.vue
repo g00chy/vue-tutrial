@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <h4>v-for</h4>
     <ul id="example-1">
       <li v-for="item in items" :key="item.message">
@@ -22,12 +22,6 @@
     </ul>
   </div>
 </template>
-
-<style scoped>
-ul {
-  list-style-position: inside;
-}
-</style>
 
 <script lang="ts">
 import Vue from "vue";
