@@ -4,7 +4,8 @@
       <router-link to="/home">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/compute_watcher">Compuute Watcher</router-link> |
-      <router-link to="/binding">binding</router-link>
+      <router-link to="/binding">binding</router-link> |
+      <router-link to="/listrender">listrender</router-link> |
     </div>
     <router-view />
   </div>
