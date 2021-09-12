@@ -5,6 +5,7 @@ on:
 
 env:
   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+  NODE_ENV: github
 
 jobs:
   deploy:
