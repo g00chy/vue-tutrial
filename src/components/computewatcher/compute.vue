@@ -1,5 +1,8 @@
 <template>
   <div>
+    <a href="https://jp.vuejs.org/v2/guide/computed.html" target="_blank"
+      >computed</a
+    ><br />
     <span v-if="seen">seen</span>
     <div v-text="val">meta</div>
     <div v-text="worstProgrammingLanguages"></div>

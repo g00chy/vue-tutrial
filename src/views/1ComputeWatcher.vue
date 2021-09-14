@@ -1,15 +1,15 @@
 <template>
-  <Index />
+  <Compute />
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import Index from "../components/computewatcher/Index.vue";
+import Compute from "../components/computewatcher/compute.vue";
 
 export default Vue.extend({
   name: "ComputeWatcher",
   components: {
-    Index,
+    Compute,
   },
 });
 </script>
