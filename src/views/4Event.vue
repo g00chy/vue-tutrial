@@ -11,6 +11,6 @@
 import Vue from "vue";
 import event1 from "@/components/events/event1.vue";
 export default Vue.extend({
-  components: {event1},
+  components: { event1 },
 });
 </script>
