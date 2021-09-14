@@ -7,7 +7,7 @@
         id="new-todo"
         placeholder="E.g. Feed the cat"
       />
-      <button v-on:click="newAddTodo">Add</button>
+      <button>Add</button>
     </form>
     <ul>
       <li
@@ -18,6 +18,8 @@
         v-on:remove="todos.splice(index, 1)"
       ></li>
     </ul>
+    see:
+    <a href="https://cli.vuejs.org/config/#runtimecompiler">runtimecompiler </a>
   </div>
 </template>
 
@@ -30,7 +32,7 @@ export type DataType = {
   nextTodoId: number;
 };
 
-let TodoItem = Vue.component("todo-item", {
+const TodoItem = Vue.component("todo-item", {
   template:
     "<li> {{ title }} <button v-on:click=\"$emit('remove')\">Remove</button> </li>",
   props: ["title"],
@@ -43,26 +45,26 @@ export default Vue.extend({
   },
   data: (): DataType => {
     return {
+      newTodoText: "",
       todos: [
         {
           id: 1,
-          title: "hogehoge",
+          title: "Do the dishes",
         },
         {
           id: 2,
-          title: "hogehoge",
+          title: "Take out the trash",
         },
         {
           id: 3,
-          title: "hogehoge",
+          title: "Mow the lawn",
         },
       ],
-      newTodoText: "",
       nextTodoId: 4,
     };
   },
   methods: {
-    newAddTodo: function (): void {
+    addNewTodo: function () {
       this.todos.push({
         id: this.nextTodoId++,
         title: this.newTodoText,
