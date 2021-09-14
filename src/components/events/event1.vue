@@ -16,7 +16,6 @@
 <script lang="ts">
 import Vue from "vue";
 
-
 export default Vue.extend({
   data: () => {
     return {
@@ -30,7 +29,7 @@ export default Vue.extend({
       this.counter2 += 1;
     },
     messageAndEvent(message: string, events: Event): void {
-      if(events){
+      if (events) {
         events.preventDefault();
       }
       this.message = message;
