@@ -6,6 +6,7 @@
       <router-link to="/compute_watcher">Compuute Watcher</router-link> |
       <router-link to="/binding">binding</router-link> |
       <router-link to="/listrender">listrender</router-link> |
+      <router-link to="/events">events</router-link> |
     </div>
     <router-view />
   </div>

@@ -39,6 +39,12 @@ const routes: Array<RouteConfig> = [
     component: () =>
       import(/* webpackChunkName: "binding" */ "../views/3ListRender.vue"),
   },
+  {
+    path: "/events",
+    name: "Events",
+    component: () =>
+      import(/* webpackChunkName: "binding" */ "../views/4Event.vue"),
+  },
 ];
 
 const router = new VueRouter({
