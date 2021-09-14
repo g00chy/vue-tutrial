@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h2>Style binding</h2>
     <a href="https://jp.vuejs.org/v2/guide/class-and-style.html" target="_blank"
       >class-and-style</a
-    >
+    ><br />
+    <h2>Style binding</h2>
     <StyleBinding></StyleBinding>
 
     <h2>v-if</h2>

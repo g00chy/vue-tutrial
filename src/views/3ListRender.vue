@@ -1,5 +1,6 @@
 <template>
   <div class="row">
+    <a href="https://jp.vuejs.org/v2/guide/list.html" target="_blank">list</a><br />
     <h2>List Render</h2>
     <div class="col-md-3">
       <h3>v-for</h3>
