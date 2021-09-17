@@ -56,7 +56,7 @@ import NativeEvent from "@/components/events/event-native.vue";
 
 export default Vue.extend({
   components: {
-    NativeEvent
+    NativeEvent,
   },
   data: () => {
     return {
