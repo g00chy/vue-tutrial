@@ -6,6 +6,10 @@
     <p>count {{ counter }}</p>
     <h4>event handler</h4>
     <button v-on:click="greet">button</button>
+    <h4>event handler</h4>
+    <button v-on:click="say('hi')">Say hi</button>
+    <button v-on:click="say('what')">Say what</button>
+    <p>{{ message }}</p>
     <h4>method</h4>
     <button v-on:click="countUp">count up</button>
     <p>count {{ counter2 }}</p>
@@ -35,6 +39,9 @@ export default Vue.extend({
       if (event) {
         alert(event.target.tagName);
       }
+    },
+    say(param: string): void {
+      this.message = param;
     },
     messageAndEvent(message: string, events: Event): void {
       if (events) {
