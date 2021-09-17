@@ -7,6 +7,7 @@
       <router-link to="/binding">binding</router-link> |
       <router-link to="/listrender">listrender</router-link> |
       <router-link to="/events">events</router-link> |
+      <router-link to="/yorimiti">yorimiti</router-link> |
     </div>
     <router-view />
   </div>

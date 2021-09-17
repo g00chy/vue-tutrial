@@ -31,19 +31,25 @@ const routes: Array<RouteConfig> = [
     path: "/binding",
     name: "Binding",
     component: () =>
-      import(/* webpackChunkName: "binding" */ "../views/2Binding.vue"),
+      import(/* webpackChunkName: "2Binding" */ "../views/2Binding.vue"),
   },
   {
     path: "/listrender",
     name: "Listrender",
     component: () =>
-      import(/* webpackChunkName: "binding" */ "../views/3ListRender.vue"),
+      import(/* webpackChunkName: "3ListRender" */ "../views/3ListRender.vue"),
   },
   {
     path: "/events",
     name: "Events",
     component: () =>
-      import(/* webpackChunkName: "binding" */ "../views/4Event.vue"),
+      import(/* webpackChunkName: "4Event" */ "../views/4Event.vue"),
+  },
+  {
+    path: "/yorimiti",
+    name: "Yorimiti",
+    component: () =>
+      import(/* webpackChunkName: "Yorimiti" */ "../views/Yorimiti.vue"),
   },
 ];
 
