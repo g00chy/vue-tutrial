@@ -22,7 +22,7 @@ export default Vue.extend({
     this.$http
       .get("https://utaten.com/lyric/jb81008003/")
       .then(function ( response ) {
-        this.data = response.data;
+        // this.data = response.data;
       });
   },
 });
