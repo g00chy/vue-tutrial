@@ -82,7 +82,7 @@
         false-value="no"
       />
       <input type="radio" v-model="pick" v-bind:value="a" />
-      {{ pick }}
+      {{ pick }}<br />
       pickにaが代入される動きが気持ち悪い
     </div>
   </div>
