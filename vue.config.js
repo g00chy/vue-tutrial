@@ -6,4 +6,7 @@
 module.exports = {
   publicPath: process.env.NODE_ENV === "github" ? "/vue-tutrial/" : "/",
   runtimeCompiler: true,
+  configureWebpack: {
+    devtool: "source-map",
+  },
 };

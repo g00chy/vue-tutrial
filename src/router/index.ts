@@ -51,6 +51,12 @@ const routes: Array<RouteConfig> = [
     component: () =>
       import(/* webpackChunkName: "Yorimiti" */ "../views/Yorimiti.vue"),
   },
+  {
+    path: "/form",
+    name: "Form",
+    component: () =>
+      import(/* webpackChunkName: "Form" */ "../views/5Form.vue"),
+  },
 ];
 
 const router = new VueRouter({
