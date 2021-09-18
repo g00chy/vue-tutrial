@@ -57,6 +57,14 @@ const routes: Array<RouteConfig> = [
     component: () =>
       import(/* webpackChunkName: "Form" */ "../views/5Form.vue"),
   },
+  {
+    path: "/component-basic",
+    name: "ComponentBasic",
+    component: () =>
+      import(
+        /* webpackChunkName: "ComponentBasic" */ "../views/6ComponentBasic.vue"
+      ),
+  },
 ];
 
 const router = new VueRouter({

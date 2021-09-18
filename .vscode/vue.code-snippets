@@ -1,7 +1,20 @@
 {
-	"vue-ts-component": {
+	"vue-extend-component": {
 		"scope": "javascript,typescript,vue",
-		"prefix": "vue-ts-component",
+		"prefix": "vue-extend-component",
+		"body": [
+		"<template>",
+		"</template>\n",
+		"<script lang=\"ts\">",
+		"import Vue from \"vue\";",
+		"export $1 Vue.component(\"$2\",{});",
+		"</script>\n"
+		],
+		"description": "vue component"
+	},
+	"vue-extend": {
+		"scope": "javascript,typescript,vue",
+		"prefix": "vue-extend",
 		"body": [
 		"<template>",
 		"\t<div class=\"row\">",
@@ -13,6 +26,6 @@
 		"export default Vue.extend({});",
 		"</script>\n"
 		],
-		"description": "vue component"
+		"description": "vue extend"
 	}
 }
