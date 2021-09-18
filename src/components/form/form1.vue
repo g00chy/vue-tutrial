@@ -83,7 +83,13 @@
       />
       <input type="radio" v-model="pick" v-bind:value="a" />
       {{ pick }}<br />
-      pickにaが代入される動きが気持ち悪い
+      pickにaが代入される動きが気持ち悪い<br />
+      <input v-model.lazy="msg" />
+      {{ msg }}<br />
+      <input v-model.number="age" type="number" />
+      {{ age }}<br />
+      <input v-model.trim="msg" />
+      {{ msg }}<br />
     </div>
   </div>
 </template>
@@ -102,6 +108,8 @@ type DataType = {
   selected: string;
   multiselect: Array<string>;
   options: Array<{ text: string; value: string }>;
+  msg: string;
+  age: number;
 };
 
 export default Vue.extend({
@@ -123,6 +131,8 @@ export default Vue.extend({
         { text: "B", value: "2" },
         { text: "C", value: "3" },
       ],
+      msg: "",
+      age: 0,
     };
   },
   computed: {
