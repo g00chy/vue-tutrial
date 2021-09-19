@@ -9,4 +9,6 @@ module.exports = {
   configureWebpack: {
     devtool: "source-map",
   },
+  filenameHashing: false,
+  productionSourceMap: false,
 };
