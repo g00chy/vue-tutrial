@@ -10,6 +10,7 @@
       <router-link to="/yorimiti">yorimiti</router-link> |
       <router-link to="/form">form</router-link> |
       <router-link to="/component-basic">ComponentBasic</router-link> |
+      <router-link to="/component-property">ComponentProperty</router-link> |
     </div>
     <router-view />
   </div>

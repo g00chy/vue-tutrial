@@ -65,6 +65,14 @@ const routes: Array<RouteConfig> = [
         /* webpackChunkName: "ComponentBasic" */ "../views/6ComponentBasic.vue"
       ),
   },
+  {
+    path: "/component-property",
+    name: "ComponentProperty",
+    component: () =>
+      import(
+        /* webpackChunkName: "ComponentBasic" */ "../views/7ComponentProperty.vue"
+      ),
+  },
 ];
 
 const router = new VueRouter({
