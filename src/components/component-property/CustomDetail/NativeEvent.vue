@@ -35,7 +35,6 @@ export default Vue.component("native-event", {
           // こうすることでコンポーネントが v-model と動作します
           input: (event: InputEvent): void => {
             if (event.target && event.target.value) {
-              console.log(this.$emit);
               this.$emit("input", event.target.value);
             }
           },
