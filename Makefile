@@ -4,3 +4,5 @@ docker-kill:
 	docker-compose -p vue-tutrial kill node
 docker-logs:
 	docker-compose -p vue-tutrial logs -f node
+docker-restart:
+	make docker-kill && make docker-up
